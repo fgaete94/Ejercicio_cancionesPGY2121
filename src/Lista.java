@@ -11,39 +11,28 @@ import java.util.ArrayList;
  * @author pipeg
  */
 public class Lista {
-    private ArrayList <Cancion> listaCanciones1;
-    private ArrayList <Cancion> listaCanciones2;
+    private ArrayList <Cancion> listaCanciones;
 
     public Lista() {
-        listaCanciones1 = new ArrayList<>();
-        listaCanciones2 = new ArrayList <>();
+        listaCanciones = new ArrayList<>();
+  
     }
     
     //agregar a la lista
-    public boolean agregaraLista1 (Cancion can){
-        return listaCanciones1.add(can);
+    public boolean agregaraLista (Cancion can){
+        return listaCanciones.add(can);
     }
-    
-    public boolean agregarLista2 (Cancion can){
-        return listaCanciones2.add(can);
-    }
-    
+   
     // mostrar listas
     
-    public void lista1(){
-        for (Cancion cancion : listaCanciones1) {
+    public void listarCanciones(){
+        for (Cancion cancion : listaCanciones) {
             cancion.infoCancion();
             System.out.println("*******\n");
             
         }
     }
+
     
-    public void lista2(){
-        for (Cancion cancion : listaCanciones2) {
-            cancion.infoCancion();
-            System.out.println("*******\n");
-            
-        }
-    }
     
 }

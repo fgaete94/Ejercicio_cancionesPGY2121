@@ -20,7 +20,8 @@ public class Main {
         Cancion cancion5 = new Cancion("por ella", "guffi", 245, true, 'S');
         Cancion cancion6 = new Cancion("salio el sol", "don omar", 180, false, 'N');
         
-        Lista lista= new Lista();
+        Lista lista1= new Lista();
+        Lista lista2= new Lista();
         
         cancion1.setArtista("Coldplay");
         cancion1.setTitulo("Yellow");
@@ -30,12 +31,12 @@ public class Main {
         
         
         
-        lista.agregaraLista1(cancion1);
-        lista.agregaraLista1(cancion3);
-        lista.agregarLista2(cancion4);
-        lista.agregarLista2(cancion2);
-        lista.agregaraLista1(cancion5);
-        lista.agregarLista2(cancion6);
+        lista1.agregaraLista(cancion1);
+        lista1.agregaraLista(cancion3);
+        lista2.agregaraLista(cancion4);
+        lista2.agregaraLista(cancion2);
+        lista1.agregaraLista(cancion5);
+        lista2.agregaraLista(cancion6);
         
         Scanner leer = new Scanner (System.in);
         int opcion;
@@ -50,11 +51,11 @@ public class Main {
             
             switch (opcion){
                 case 1:
-                    lista.lista1();
+                    lista1.listarCanciones();
                     break;
                     
                 case 2:
-                    lista.lista2();
+                    lista2.listarCanciones();
                     break;
                     
                 case 3:
