@@ -13,22 +13,21 @@ import java.util.Date;
  */
 public class Evento {
     
-    private int codigo,horaini,horater,precio,cantidadPersonas;
-    private Date fecha;
+    private int codigo,precio,cantidadPersonas;
+    private Date fechaIni, fechaTer;
     private String ubicacion;
     private char tipoevent; //A.- cumpleaños B.-matrimonio C.- cena d.-fiesta
-    private boolean entretencion;
+    private char entretencion; //S.- si N.- no
 
     public Evento() {
     }
 
-    public Evento(int codigo, int horaini, int horater, int precio, int cantidadPersonas, Date fecha, String ubicacion, char tipoevent, boolean entretencion) {
+    public Evento(int codigo, int precio, int cantidadPersonas, Date fechaIni, Date fechaTer, String ubicacion, char tipoevent, char entretencion) {
         this.codigo = codigo;
-        this.horaini = horaini;
-        this.horater = horater;
         this.precio = precio;
         this.cantidadPersonas = cantidadPersonas;
-        this.fecha = fecha;
+        this.fechaIni = fechaIni;
+        this.fechaTer = fechaTer;
         this.ubicacion = ubicacion;
         this.tipoevent = tipoevent;
         this.entretencion = entretencion;
@@ -40,22 +39,6 @@ public class Evento {
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
-    }
-
-    public int getHoraini() {
-        return horaini;
-    }
-
-    public void setHoraini(int horaini) {
-        this.horaini = horaini;
-    }
-
-    public int getHorater() {
-        return horater;
-    }
-
-    public void setHorater(int horater) {
-        this.horater = horater;
     }
 
     public int getPrecio() {
@@ -74,12 +57,20 @@ public class Evento {
         this.cantidadPersonas = cantidadPersonas;
     }
 
-    public Date getFecha() {
-        return fecha;
+    public Date getFechaIni() {
+        return fechaIni;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setFechaIni(Date fechaIni) {
+        this.fechaIni = fechaIni;
+    }
+
+    public Date getFechaTer() {
+        return fechaTer;
+    }
+
+    public void setFechaTer(Date fechaTer) {
+        this.fechaTer = fechaTer;
     }
 
     public String getUbicacion() {
@@ -98,18 +89,20 @@ public class Evento {
         this.tipoevent = tipoevent;
     }
 
-    public boolean isEntretencion() {
+    public char getEntretencion() {
         return entretencion;
     }
 
-    public void setEntretencion(boolean entretencion) {
+    public void setEntretencion(char entretencion) {
         this.entretencion = entretencion;
     }
 
     @Override
     public String toString() {
-        return "Evento{" + "codigo=" + codigo + ", horaini=" + horaini + ", horater=" + horater + ", precio=" + precio + ", cantidadPersonas=" + cantidadPersonas + ", fecha=" + fecha + ", ubicacion=" + ubicacion + ", tipoevent=" + tipoevent + ", entretencion=" + entretencion + '}';
+        return "Evento{" + "codigo=" + codigo + ", precio=" + precio + ", cantidadPersonas=" + cantidadPersonas + ", fechaIni=" + fechaIni + ", fechaTer=" + fechaTer + ", ubicacion=" + ubicacion + ", tipoevent=" + tipoevent + ", entretencion=" + entretencion + '}';
     }
+
+    
     
     //codigo evento
     
