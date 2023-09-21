@@ -5,6 +5,9 @@
 package EjercicioEventos;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 
 /**
  *
@@ -33,11 +36,28 @@ public class ListaEvento {
         for (Evento evento : listaEvento) {
             venta= evento.getCantidadPersonas()*evento.getPrecio();
             tot=tot+venta;
-        System.out.println("El total vendido en este evento es de: $"+tot);
+        System.out.println("El total vendido en este  tipo de evento es de: $"+tot);
             
         }
     }
     
+    //Tamaño de la lista
     
+    public int tamañoLista(){
+       return listaEvento.size();
+    }
+    
+    //ordenar
+    
+    public void ordenar(){
+        listaEvento.sort((evento1, evento2) -> evento1.getFechaIni().compareTo(evento2.getFechaIni()));
+    }
+
+    @Override
+    public String toString() {
+        return "ListaEvento{" + listaEvento + '}';
+    }
+            
+
     
 }
